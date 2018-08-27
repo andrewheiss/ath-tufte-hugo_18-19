@@ -6,8 +6,8 @@
             {{ .Site.Params.course.number }}: {{ .Site.Title }} ({{ .Site.Params.course.semester }})
         </span><br>
         <span>
-            <em><a href="{{ .Site.Params.university.url }}">{{ .Site.Params.university.name }}</a></em> | 
-            <em><a href="{{ .Site.Params.school.url }}">{{ .Site.Params.school.name }}</a></em>
+            <a href="{{ .Site.Params.university.url }}">{{ .Site.Params.university.name }}</a> | 
+            <a href="{{ .Site.Params.school.url }}">{{ .Site.Params.school.name }}</a>
         </span>
         </div>
 
@@ -42,14 +42,14 @@
         </ul>
 
         <div class="credits">
-        <span>all content licensed under a <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License</a>.</span><br><br>
+        <span class="credit">All content licensed under a <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License</a>.</span><br>
 
-        <span>content © {{ .Site.Params.course.copyrightYear }} <a href="{{ .Site.Params.instructor.url }}">{{ .Site.Params.author | lower }}</a></span><br><br>
+        <span class="credit">Content <i class="fab fa-creative-commons"></i> {{ .Site.Params.course.copyrightYear }} <a href="{{ .Site.Params.instructor.url }}">{{ .Site.Params.author }}</a></span><br>
 
         {{- if .Site.Params.credits }}
-        <span>{{ .Site.Params.credits | markdownify }}</span><br><br>
+        <span class="credit">{{ .Site.Params.credits | markdownify }}</span><br>
         {{- end }}
 
-        <span>this site created with the <a href="https://github.com/andrewheiss/ath-tufte-hugo">ath-tufte-hugo theme</a> in <a href="https://bookdown.org/yihui/blogdown/">blogdown</a> and <a href="https://gohugo.io/">hugo</a>.</span>
+        <span class="credit">This site created with the <a href="https://github.com/andrewheiss/ath-tufte-hugo_18-19">ath-tufte-hugo theme</a> in <a href="https://bookdown.org/yihui/blogdown/">blogdown</a> and <a href="https://gohugo.io/">Hugo</a>.</span>
         </div>
     </footer>
