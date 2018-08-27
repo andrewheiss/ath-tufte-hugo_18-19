@@ -54,12 +54,6 @@ a > code {
     font-size: 1.35rem;
 }
 
-.course-info {
-    font-size: 1.2rem;
-    text-align: center;
-    margin-bottom: 1.25rem;
-}
-
 .wrap .table th {
     padding-left: 0.5em;
 }
@@ -70,8 +64,29 @@ a > code {
     padding-bottom: 0.5em;
 }
 
+footer {
+    font-family: "Oswald", sans-serif;
+}
+
+.course-info {
+    font-size: 1.3rem;
+    text-align: center;
+    margin-bottom: 1.25rem;
+}
+
 .course-name {
-    font-family: "ff-basic-gothic-sc-web-pro", sans-serif;
+    font-size: 1.4rem;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+.credits {
+    font-size: 1rem;
+}
+
+.credit {
+    display: inline-block;
+    margin-bottom: 0.3rem;
 }
 
 ul.footer-links {
