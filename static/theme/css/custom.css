@@ -96,12 +96,14 @@ ul.footer-links {
 .fake-header {
     font-family: "Oswald", sans-serif;
     font-weight: 600;
+    text-transform: uppercase;
     font-size: 1.2rem;
 }
 
 .fake-header-table {
     font-family: "Oswald", sans-serif;
     font-weight: 600;
+    text-transform: uppercase;
     font-size: 1.25rem;
     display: block;
     padding-top: 1rem;
