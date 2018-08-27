@@ -58,6 +58,10 @@ body {
   max-width: 1400px;
   counter-reset: sidenote-counter; }
 
+.wrap strong, .wrap b {
+    font-weight: 400;
+}
+
 .wrap {
   /*-- Table styling section - For Tufte-Jekyll, booktabs style is default for Markdown tables  --*/
   /* add space between thead row and tbody */ }
