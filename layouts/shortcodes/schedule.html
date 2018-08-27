@@ -1,44 +1,42 @@
-<table class="table" style="max-width:100%">
-    <thead>
-        <tr>
-            <th style="width:20%;text-align:right">Date</th>
-            <th style="width:50%;text-align:left">Topic</th>
-            <th style="width:10%;text-align:center">Reading</th>
-            <th style="width:10%;text-align:center">Assignment</th>
-            <th style="width:10%;text-align:center">Class</th>
-        </tr>
-    </thead>
-
+<table class="table schedule" style="max-width:100%">
     <tbody>
 
     {{- range .Site.Data.lessons }}
         {{- range . }}
         <tr>
-            <td align="right" style="text-align:right">{{ .date }}</td>
-            <td>{{ .title | markdownify }}</td>
+            <td align="right" style="width:20%;text-align:right">{{ .date }}</td>
+            <td style="width:50%;text-align:left">{{ .title | markdownify }}</td>
+
+            {{- if or .reading .assignment .class }}
 
             {{- if .reading }}
-            <td align="center" style="text-align:center"><a href="{{ .Site.baseurl }}/reading/{{ .reading }}/">
+            <td align="center" style="width:10%;text-align:center"><a href="{{ .Site.baseurl }}/reading/{{ .reading }}/">
                 <i class="fas fa-book-reader fa-lg"></i></a></td>
             {{- else }}
-            <td align="center" style="text-align:center"><font color="f1f1f1">
+            <td align="center" style="width:10%;text-align:center"><font color="f1f1f1">
                 <i class="fas fa-book-reader fa-lg"></i></font></td>
             {{- end }}
 
             {{- if .assignment }}
-            <td align="center" style="text-align:center"><a href="{{ .Site.baseurl }}/assignment/{{ .assignment }}/">
+            <td align="center" style="width:10%;text-align:center"><a href="{{ .Site.baseurl }}/assignment/{{ .assignment }}/">
                 <i class="fas fa-laptop-code"></i></a></td>
             {{- else }}
-            <td align="center" style="text-align:center"><font color="f1f1f1">
+            <td align="center" style="width:10%;text-align:center"><font color="f1f1f1">
                 <i class="fas fa-laptop-code"></i></font></td>
             {{- end }}
 
             {{- if .class }}
-            <td align="center" style="text-align:center"><a href="{{ .Site.baseurl }}/class/{{ .class }}/">
+            <td align="center" style="width:10%;text-align:center"><a href="{{ .Site.baseurl }}/class/{{ .class }}/">
                 <i class="fas fa-university fa-lg"></i></a></td>
             {{- else }}
-            <td align="center" style="text-align:center"><font color="f1f1f1">
+            <td align="center" style="width:10%;text-align:center"><font color="f1f1f1">
                 <i class="fas fa-university fa-lg"></i></font></td>
+            {{- end }}
+
+            {{- else }}
+            <td style="width:10%;text-align:center" class="mid-table-header">Reading</td>
+            <td style="width:10%;text-align:center" class="mid-table-header">Assignment</td>
+            <td style="width:10%;text-align:center" class="mid-table-header">Class</td>
             {{- end }}
         </tr>
         {{- end }}
