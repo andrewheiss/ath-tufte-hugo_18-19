@@ -312,6 +312,7 @@ article .sidenote-number:after, article .sidenote:before {
 article .sidenote-number:after {
   content: counter(sidenote-counter);
   font-size: 0.75rem;
+  line-height: 0;
   top: -0.5rem;
   left: 0rem; }
 article .sidenote:before {
