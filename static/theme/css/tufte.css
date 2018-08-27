@@ -99,7 +99,10 @@ body {
     margin-top: 1.25rem;
     margin-bottom: 1.25rem;
     font-size: 1.75rem;
-    line-height: 0.95; }
+    line-height: 1.1; }
+  .wrap h1 a {
+    hyphens: none;
+  }
   .wrap h2 {
     font-family: "Oswald", sans-serif;
     font-weight: 400;
